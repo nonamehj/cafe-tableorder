@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 const Alert = () => {
   const { isAlertOpen, closeAlertModal } = useGlobalContext();
-  const [countdown, setCountdown] = useState(3);
+  const [modalCountdown, setModalCountdown] = useState(3);
   useEffect(() => {
     if (!isAlertOpen) return;
     const intervalId = setInterval(() => {
-      setCountdown((prev) => prev - 1);
+      setModalCountdown((prev) => prev - 1);
     }, 1000);
     const timeoutId = setTimeout(() => {
       closeAlertModal();
@@ -17,7 +17,7 @@ const Alert = () => {
     return () => {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
-      setCountdown(3);
+      setModalCountdown(3);
     };
   }, [closeAlertModal, isAlertOpen]);
 
@@ -31,7 +31,7 @@ const Alert = () => {
     >
       <div className="alert-modal-content">
         <div className="alert-top">
-          <p className="alert-countdown">{countdown}초 뒤에 종료됩니다</p>
+          <p className="alert-countdown">{modalCountdown}초 뒤에 종료됩니다</p>
           <button onClick={closeAlertModal} className="alert-close-btn">
             <FaTimes />
           </button>
