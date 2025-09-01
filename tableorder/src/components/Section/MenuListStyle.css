@@ -1,0 +1,101 @@
+.section {
+  position: relative;
+  display: flex;
+  padding: 0.2rem 0;
+  border-radius: 0.25rem;
+  background-color: rgb(29, 29, 29);
+  overflow: hidden;
+}
+
+.menulist-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0.125rem;
+  overflow-y: auto;
+}
+
+.menulist-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(230px, 250px);
+  width: 100%;
+}
+
+@media screen and (max-width: 479px) {
+  .section {
+    margin: 0 0.4rem;
+    overflow-y: auto;
+  }
+
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 210px;
+    gap: 0.2rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .section {
+    margin: 0 0.5rem;
+    overflow-y: auto;
+  }
+
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-auto-rows: 230px;
+    gap: 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding: 0.2rem;
+  }
+
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 230px;
+    gap: 0.225rem;
+    margin-top: 0.225rem;
+    margin-bottom: 0.225rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .section {
+    padding: 0.1rem 0.25rem;
+  }
+
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 0.225rem;
+    margin-top: 0.225rem;
+    margin-bottom: 0.225rem;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+  .section {
+    padding: 0.1rem 0.25rem;
+  }
+
+  .menulist-center {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 280px;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 0.1rem 0.25rem;
+  }
+  .menulist-center {
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-auto-rows: 310px;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}

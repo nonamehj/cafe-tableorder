@@ -1,0 +1,159 @@
+.alert-modal-container {
+  display: none;
+}
+.show-alert-container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 8, 8, 0.8);
+}
+
+.alert-modal-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem;
+  background-color: #4d4d4d;
+  background-color: #fff;
+  border-radius: 0.25rem;
+}
+.alert-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0;
+  border-bottom: 1px double rgba(0, 0, 0, 0.7);
+}
+.alert-countdown {
+  margin-left: 0.5rem;
+  padding: 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.alert-close-btn {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  font-size: 1.1rem;
+  background-color: transparent;
+  border-color: transparent;
+  color: #000;
+  cursor: pointer;
+}
+.staff-call-msg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 479px) {
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+}
+@media screen and (max-width: 767px) {
+  .alert-modal-content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 95px);
+    display: flex;
+    flex-direction: column;
+  }
+  .alert-countdown {
+    font-size: 1rem;
+  }
+  .staff-call-msg {
+    flex: 1;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .alert-modal-content {
+    top: 50%;
+    left: 50%;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 300px;
+    max-height: 300px;
+    transform: translate(-50%, -50%);
+  }
+  .alert-top {
+    flex: 0 0 64px;
+    padding: 0.25rem;
+  }
+  .alert-countdown {
+    font-size: 1.1rem;
+  }
+  .alert-close-btn {
+    font-size: 1.3rem;
+  }
+  .staff-call-msg {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .alert-modal-content {
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 350px;
+    max-height: 350px;
+  }
+  .alert-top {
+    flex: 0 0 66px;
+  }
+  .alert-countdown {
+    font-size: 1.2rem;
+  }
+  .alert-close-btn {
+    font-size: 1.4rem;
+  }
+  .staff-call-msg {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .alert-modal-content {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 400px;
+    max-height: 400px;
+  }
+  .alert-top {
+    flex: 0 0 68px;
+  }
+  .alert-countdown {
+    font-size: 1.3rem;
+  }
+  .alert-close-btn {
+    font-size: 1.5rem;
+  }
+  .staff-call-msg {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .alert-modal-content {
+    min-width: 550px;
+    max-width: 550px;
+    min-height: 450px;
+    max-height: 450px;
+  }
+  .alert-top {
+    flex: 0 0 70px;
+  }
+  .alert-countdown {
+    font-size: 1.4rem;
+  }
+  .alert-close-btn {
+    font-size: 1.6rem;
+  }
+  .staff-call-msg {
+    font-size: 1.7rem;
+  }
+}
